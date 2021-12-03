@@ -8,6 +8,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Navbar />
+        <Formreg />
         <Formlogin />
       </div>
     );

@@ -14,53 +14,97 @@ class Formreg extends React.Component {
                 <div className="col-lg-7">
                     <div className="p-5">
                     <div className="text-center">
-                        <h1 className="h4 text-gray-900 mb-4">Registrate</h1>
+                        <h1 className="h4 text-gray-900 mb-4"><b>Registrate</b></h1>
                     </div>
                     <form className="user">
                         <div className="form-group row">
                         <div className="col-sm-6 mb-3 mb-sm-0">
+                            <label for="Nombrereg" class="form-label">Nombre</label>
                             <input
                             type="text"
-                            className="form-control form-control-user"
-                            id="exampleFirstName"
-                            placeholder="First Name"
+                            className="form-control"
+                            id="Nombrereg"
+                            placeholder="Ingresa tu nombre ..."
                             />
                         </div>
                         <div className="col-sm-6">
+                        <label for="tipodocumento" class="form-label">Tipo de documento</label>
                             <input
                             type="text"
-                            className="form-control form-control-user"
-                            id="exampleLastName"
-                            placeholder="Last Name"
+                            className="form-control"
+                            id="tipodocumento"
+                            placeholder="Tipo de documento ..."
+                            list="datalistOptions"
                             />
+                            <datalist id="datalistOptions">  
+                                    <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+                                    <option value="Pasaporte">Pasaporte</option>
+                                    <option value="Cédula de extranjería">Cédula de extranjería</option>
+                                    <div className="invalid-feedback" data-sb-feedback="name:required">Tipo de documento requerido.</div>
+                            </datalist>
                         </div>
-                        </div>
-                        <div className="form-group">
-                        <input
-                            type="email"
-                            className="form-control form-control-user"
-                            id="exampleInputEmail"
-                            placeholder="Email Address"
-                        />
                         </div>
                         <div className="form-group row">
                         <div className="col-sm-6 mb-3 mb-sm-0">
+                        <label for="numerodocreg" class="form-label">Número de documento</label>
                             <input
-                            type="password"
-                            className="form-control form-control-user"
-                            id="exampleInputPassword"
-                            placeholder="Password"
+                            type="text"
+                            className="form-control"
+                            id="numerodocreg"
+                            placeholder="Ingresa tu número de documento …"
                             />
                         </div>
                         <div className="col-sm-6">
+                        <label for="fnacimiento" class="form-label">Fecha de nacimiento</label>
                             <input
-                            type="password"
-                            className="form-control form-control-user"
-                            id="exampleRepeatPassword"
-                            placeholder="Repeat Password"
+                            type="date"
+                            className="form-control"
+                            id="fnacimiento"
+                            placeholder="Fecha de nacimiento ..."
                             />
                         </div>
                         </div>
+                        <div className="form-group row">
+                        <div className="col-sm-6 mb-3 mb-sm-0">
+                        <label for="fexpedicion" class="form-label">Fecha de expedición</label>
+                            <input
+                            type="date"
+                            className="form-control"
+                            id="fexpedicion"
+                            placeholder="Fecha de expedición ..."
+                            />
+                        </div>
+                        <div className="col-sm-6">
+                        <label for="emailreg" class="form-label">Email</label>
+                            <input
+                            type="email"
+                            className="form-control"
+                            id="emailreg"
+                            placeholder="Ingresa tu email …"
+                            />
+                        </div>
+                        </div>
+                        <div className="form-group row">
+                        <div className="col-sm-6 mb-3 mb-sm-0">
+                        <label for="direccion" class="form-label">Dirección</label>
+                            <input
+                            type="text"
+                            className="form-control"
+                            id="direccion"
+                            placeholder="Ingresa tu dirección ..."
+                            />
+                        </div>
+                        <div className="col-sm-6">
+                        <label for="passwordreg" class="form-label">Contraseña</label>
+                            <input
+                            type="password"
+                            className="form-control"
+                            id="passwordreg"
+                            placeholder="Ingresa tu contraseña …"
+                            />
+                        </div>
+                        </div>
+
                         <a
                         href="./login.html"
                         className="btn btn-primary btn-user btn-block"
