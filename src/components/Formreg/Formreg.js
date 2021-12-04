@@ -19,16 +19,17 @@ class Formreg extends React.Component {
                     <form className="user">
                         <div className="form-group row">
                         <div className="col-sm-6 mb-3 mb-sm-0">
-                            <label for="Nombrereg" class="form-label">Nombre</label>
+                            <label htmlFor="Nombrereg" className="form-label">Nombre</label>
                             <input
                             type="text"
                             className="form-control"
                             id="Nombrereg"
                             placeholder="Ingresa tu nombre ..."
+                            autoFocus
                             />
                         </div>
                         <div className="col-sm-6">
-                        <label for="tipodocumento" class="form-label">Tipo de documento</label>
+                        <label htmlFor="tipodocumento" className="form-label">Tipo de documento</label>
                             <input
                             type="text"
                             className="form-control"
@@ -46,7 +47,7 @@ class Formreg extends React.Component {
                         </div>
                         <div className="form-group row">
                         <div className="col-sm-6 mb-3 mb-sm-0">
-                        <label for="numerodocreg" class="form-label">Número de documento</label>
+                        <label htmlFor="numerodocreg" className="form-label">Número de documento</label>
                             <input
                             type="text"
                             className="form-control"
@@ -55,7 +56,7 @@ class Formreg extends React.Component {
                             />
                         </div>
                         <div className="col-sm-6">
-                        <label for="fnacimiento" class="form-label">Fecha de nacimiento</label>
+                        <label htmlFor="fnacimiento" className="form-label">Fecha de nacimiento</label>
                             <input
                             type="date"
                             className="form-control"
@@ -66,7 +67,7 @@ class Formreg extends React.Component {
                         </div>
                         <div className="form-group row">
                         <div className="col-sm-6 mb-3 mb-sm-0">
-                        <label for="fexpedicion" class="form-label">Fecha de expedición</label>
+                        <label htmlFor="fexpedicion" className="form-label">Fecha de expedición</label>
                             <input
                             type="date"
                             className="form-control"
@@ -75,7 +76,7 @@ class Formreg extends React.Component {
                             />
                         </div>
                         <div className="col-sm-6">
-                        <label for="emailreg" class="form-label">Email</label>
+                        <label htmlFor="emailreg" className="form-label">Email</label>
                             <input
                             type="email"
                             className="form-control"
@@ -86,7 +87,7 @@ class Formreg extends React.Component {
                         </div>
                         <div className="form-group row">
                         <div className="col-sm-6 mb-3 mb-sm-0">
-                        <label for="direccion" class="form-label">Dirección</label>
+                        <label htmlFor="direccion" className="form-label">Dirección</label>
                             <input
                             type="text"
                             className="form-control"
@@ -95,7 +96,7 @@ class Formreg extends React.Component {
                             />
                         </div>
                         <div className="col-sm-6">
-                        <label for="passwordreg" class="form-label">Contraseña</label>
+                        <label htmlFor="passwordreg" className="form-label">Contraseña</label>
                             <input
                             type="password"
                             className="form-control"
@@ -106,7 +107,7 @@ class Formreg extends React.Component {
                         </div>
 
                         <a
-                        href="./login.html"
+                        href="./login"
                         className="btn btn-primary btn-user btn-block"
                         style={{backgroundColor:"#0050A1"}}
                         >
@@ -114,7 +115,7 @@ class Formreg extends React.Component {
                         </a>
                     </form>
                     <div className="text-center">
-                        <a className="small" href="login.html"
+                        <a className="small" href="login"
                         >Ya tienes una cuenta? Login!</a
                         >
                     </div>

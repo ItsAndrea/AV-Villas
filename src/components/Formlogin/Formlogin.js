@@ -21,15 +21,14 @@ class Formlogin extends React.Component {
                             </div>
                             <form className="user">
                                 <div className="form-group">
-                                <label for="documento" className="form-label">Tipo de documento</label>
-                                <input className="form-control" list="datalistOptions" id="documento" type="text" placeholder="Selecciona tipo de documento..." data-sb-validations="required" />
+                                <label htmlFor="documento" className="form-label">Tipo de documento</label>
+                                <input className="form-control" list="datalistOptions" id="documento" type="text" placeholder="Selecciona tipo de documento..." data-sb-validations="required" autoFocus/>
                                 <datalist id="datalistOptions">  
                                     <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
                                     <option value="Pasaporte">Pasaporte</option>
                                     <option value="Cédula de extranjería">Cédula de extranjería</option>
-                                    <div className="invalid-feedback" data-sb-feedback="name:required">Tipo de documento requerido.</div>
                                 </datalist>
-                                <label for="inputCedula" className="form-label">Numero de documento</label>
+                                <label htmlFor="inputCedula" className="form-label">Numero de documento</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -38,7 +37,7 @@ class Formlogin extends React.Component {
                                     placeholder="Ingresa tu número de identificación..."
                                 />
                                 <div className="form-group">
-                                <label for="inputPassword" className="form-label">Contraseña</label>
+                                <label htmlFor="inputPassword" className="form-label">Contraseña</label>
                                 <input
                                     type="password"
                                     className="form-control"
@@ -48,7 +47,7 @@ class Formlogin extends React.Component {
                                 </div>
                                 </div>
                                 <a
-                                href="./dashboard.html"
+                                href="./dashboard"
                                 id="loginBtn"
                                 type="submit"
                                 className="btn btn-primary btn-user btn-block"
@@ -58,7 +57,7 @@ class Formlogin extends React.Component {
                                 </a>
                             </form>
                             <div className="text-center">
-                                <a className="small" href="./register.html"
+                                <a className="small" href="./registro"
                                 >Crea una cuenta</a
                                 >
                             </div>
