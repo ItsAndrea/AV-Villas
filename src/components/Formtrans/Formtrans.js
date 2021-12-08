@@ -22,7 +22,7 @@ class Formtrans extends React.Component {
 
                     <Col>
                         <br />
-                        <Button variant="primary" type="submit" style={{margin:"0px"}}>
+                        <Button variant="primary" type="submit" style={{background:"#0050A1"}}>
                             Transferir
                         </Button>
                     </ Col>

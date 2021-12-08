@@ -1,4 +1,5 @@
 import React from "react";
+import { Form, Row, Col, Button } from 'react-bootstrap';
 
 class Cancelar extends React.Component {
   constructor(props) {
@@ -21,16 +22,27 @@ class Cancelar extends React.Component {
 
     render() {
         return (
-          <form onSubmit={this.handleSubmit}>
-          <label>
-              Num. de cancelación: <br/>
-              <input type="text" value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" style={{background:"#0050A1", color:"white"}}/>
+
+            <Form onSubmit={this.handleSubmit}>                
+                <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridCity">
+                    <Form.Label>Num. de cancelación</Form.Label>
+                    <Form.Control type="text" value={this.state.value} onChange={this.handleChange} placeholder="Ingresa # de cuenta a cancelar … " />
+                    </Form.Group>
+
+                    <Col>
+                        <br />
+                        <Button variant="primary" type="submit" style={{background:"#0050A1"}}>
+                            Cancelar
+                        </Button>
+                    </ Col>
+              
+                </Row>
+            </Form>
           
-      </form>
         )
     }
 }
 
 export default Cancelar
+
