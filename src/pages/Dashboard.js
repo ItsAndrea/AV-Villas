@@ -1,5 +1,7 @@
 import React from "react";
 import Tablamov from "../components/Tablamov"
+import Cancelar from "../components/Cancelar"
+import Formtrans from "../components/Formtrans"
 
 class Dashboard extends React.Component {
 
@@ -7,6 +9,8 @@ class Dashboard extends React.Component {
         return (
             <div>
                 <Tablamov />
+                <Cancelar />
+                <Formtrans />
             </div>
         )
     }
