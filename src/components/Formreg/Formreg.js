@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Formreg extends React.Component {
 
@@ -16,6 +17,7 @@ class Formreg extends React.Component {
                     <div className="text-center">
                         <h1 className="h4 text-gray-900 mb-4"><b>Registrate</b></h1>
                     </div>
+                    <br/>
                     <form className="user">
                         <div className="form-group row">
                         <div className="col-sm-6 mb-3 mb-sm-0">
@@ -96,16 +98,36 @@ class Formreg extends React.Component {
                             />
                         </div>
                         <div className="col-sm-6">
+                        <label htmlFor="ciudadreg" className="form-label">Ciudad</label>
+                            <input
+                            type="text"
+                            className="form-control"
+                            id="ciudadreg"
+                            placeholder="Ingresa tu contraseña …"
+                            />
+                        </div>
+                        </div>
+                        <div className="form-group row">
+                        <div className="col-sm-6 mb-3 mb-sm-0">
                         <label htmlFor="passwordreg" className="form-label">Contraseña</label>
                             <input
                             type="password"
                             className="form-control"
                             id="passwordreg"
-                            placeholder="Ingresa tu contraseña …"
+                            placeholder="Ingresa tu dirección ..."
+                            />
+                        </div>
+                        <div className="col-sm-6">
+                        <label htmlFor="passwordregconf" className="form-label">Confirmar contraseña</label>
+                            <input
+                            type="password"
+                            className="form-control"
+                            id="passwordregconf"
+                            placeholder="Ingresa nuevamente tu contraseña …"
                             />
                         </div>
                         </div>
-
+                        <br/>
                         <a
                         href="./login"
                         className="btn btn-primary btn-user btn-block"
@@ -115,9 +137,8 @@ class Formreg extends React.Component {
                         </a>
                     </form>
                     <div className="text-center">
-                        <a className="small" href="login"
-                        >Ya tienes una cuenta? Login!</a
-                        >
+                        <Link className="small" to="/login"
+                        >Ya tienes una cuenta? Login!</Link>
                     </div>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Formlogin extends React.Component {
 
@@ -19,6 +20,7 @@ class Formlogin extends React.Component {
                             <div className="text-center">
                                 <h1 className="h4 text-gray-900 mb-4">Ingresa a tu cuenta</h1>
                             </div>
+                            <br/>
                             <form className="user">
                                 <div className="form-group">
                                 <label htmlFor="documento" className="form-label">Tipo de documento</label>
@@ -46,6 +48,7 @@ class Formlogin extends React.Component {
                                 />
                                 </div>
                                 </div>
+                                <br/>
                                 <a
                                 href="./dashboard"
                                 id="loginBtn"
@@ -57,9 +60,8 @@ class Formlogin extends React.Component {
                                 </a>
                             </form>
                             <div className="text-center">
-                                <a className="small" href="./registro"
-                                >Crea una cuenta</a
-                                >
+                                <Link className="small" to="/registro"
+                                >Crea una cuenta</Link>
                             </div>
                             </div>
                         </div>
