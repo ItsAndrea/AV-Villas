@@ -1,9 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class Formreg extends React.Component {
+const Formreg = ({registroUsuario}) => {
+    const registrarUsuario = (event) => {
+        event.preventDefault();
 
-    render() {
+        const datosUsuario = {
+            nombre:event.target.Nombrereg.value,
+            tipoDoc:event.target.tipodocumento.value,
+            numDoc:event.target.numerodocreg.value,
+            fecNac:event.target.fnacimiento.value,
+            fecExp:event.target.fexpedicion.value,
+            correo:event.target.emailreg.value,
+            direccion:event.target.direccion.value,
+            ciudad:event.target.ciudadreg.value,
+            password:event.target.passwordreg.value,
+            confpassword:event.target.passwordregconf.value,
+            rol:"externo",
+            estado:"activo"
+        };
+
+        if (!valpassword(datosUsuario.password, datosUsuario.confpassword)) {
+            alert("Las contraseñas no coincide");
+          } else {
+            registroUsuario(datosUsuario);
+          }
+
+    };
+
+    const valpassword = (password, confpassword) => {
+        return password === confpassword;
+      };
+    
+
         return (
         <section className="page-section bg-white" id="login">
         <div className="container">
@@ -18,7 +47,7 @@ class Formreg extends React.Component {
                         <h1 className="h4 text-gray-900 mb-4"><b>Registrate</b></h1>
                     </div>
                     <br/>
-                    <form className="user">
+                    <form className="user" onSubmit={registrarUsuario}>
                         <div className="form-group row">
                         <div className="col-sm-6 mb-3 mb-sm-0">
                             <label htmlFor="Nombrereg" className="form-label">Nombre</label>
@@ -26,8 +55,10 @@ class Formreg extends React.Component {
                             type="text"
                             className="form-control"
                             id="Nombrereg"
+                            name="Nombrereg"
                             placeholder="Ingresa tu nombre ..."
                             autoFocus
+                            required
                             />
                         </div>
                         <div className="col-sm-6">
@@ -36,10 +67,12 @@ class Formreg extends React.Component {
                             type="text"
                             className="form-control"
                             id="tipodocumento"
+                            name="tipodocumento"
                             placeholder="Tipo de documento ..."
                             list="datalistOptions"
+                            required
                             />
-                            <datalist id="datalistOptions">  
+                            <datalist id="datalistOptions" name>  
                                     <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
                                     <option value="Pasaporte">Pasaporte</option>
                                     <option value="Cédula de extranjería">Cédula de extranjería</option>
@@ -54,7 +87,9 @@ class Formreg extends React.Component {
                             type="text"
                             className="form-control"
                             id="numerodocreg"
+                            name="numerodocreg"
                             placeholder="Ingresa tu número de documento …"
+                            required
                             />
                         </div>
                         <div className="col-sm-6">
@@ -63,7 +98,9 @@ class Formreg extends React.Component {
                             type="date"
                             className="form-control"
                             id="fnacimiento"
+                            name="fnacimiento"
                             placeholder="Fecha de nacimiento ..."
+                            required
                             />
                         </div>
                         </div>
@@ -74,7 +111,9 @@ class Formreg extends React.Component {
                             type="date"
                             className="form-control"
                             id="fexpedicion"
+                            name="fexpedicion"
                             placeholder="Fecha de expedición ..."
+                            required
                             />
                         </div>
                         <div className="col-sm-6">
@@ -83,7 +122,9 @@ class Formreg extends React.Component {
                             type="email"
                             className="form-control"
                             id="emailreg"
+                            name="emailreg"
                             placeholder="Ingresa tu email …"
+                            required
                             />
                         </div>
                         </div>
@@ -94,7 +135,9 @@ class Formreg extends React.Component {
                             type="text"
                             className="form-control"
                             id="direccion"
+                            name="direccion"
                             placeholder="Ingresa tu dirección ..."
+                            required
                             />
                         </div>
                         <div className="col-sm-6">
@@ -103,7 +146,9 @@ class Formreg extends React.Component {
                             type="text"
                             className="form-control"
                             id="ciudadreg"
+                            name="ciudadreg"
                             placeholder="Ingresa tu contraseña …"
+                            required
                             />
                         </div>
                         </div>
@@ -114,7 +159,9 @@ class Formreg extends React.Component {
                             type="password"
                             className="form-control"
                             id="passwordreg"
-                            placeholder="Ingresa tu dirección ..."
+                            name="passwordreg"
+                            placeholder="Ingresa tu contraseña ..."
+                            required
                             />
                         </div>
                         <div className="col-sm-6">
@@ -123,18 +170,21 @@ class Formreg extends React.Component {
                             type="password"
                             className="form-control"
                             id="passwordregconf"
+                            name="passwordregconf"
                             placeholder="Ingresa nuevamente tu contraseña …"
+                            required
                             />
                         </div>
                         </div>
                         <br/>
-                        <a
-                        href="./login"
+                        <button
+                        variant="primary" 
+                        type="submit"
                         className="btn btn-primary btn-user btn-block"
                         style={{backgroundColor:"#0050A1"}}
                         >
                         Registrar
-                        </a>
+                        </button>
                     </form>
                     <div className="text-center">
                         <Link className="small" to="/login"
@@ -146,9 +196,9 @@ class Formreg extends React.Component {
             </div>
             </div>
         </div>
-        </section>
+            </section>
         )
     }
-}
+
 
 export default Formreg

@@ -2,18 +2,31 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Formreg from "../components/Formreg"
 import Footer from "../components/Footer"
+import { useNavigate } from "react-router-dom";
 
-class Registro extends React.Component {
-
-    render() {
+const Registro = (props) => {
+    let nav = useNavigate()
+    const obtenerRegis = (datos) =>{
+        fetch(`http://localhost:8000/api/crear_usuairo`, {
+          method: "POST",
+          body: JSON.stringify(datos),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .catch((error) => console.error("Error:", error))
+          .then((response) => {
+            nav("/login");
+          });
+    }
         return (
             <div>
                 <Navbar />
-                <Formreg />
+                <Formreg registroUsuario={obtenerRegis}/>
                 <Footer />
             </div>
-        )
-    }
-}
+        );
+};
 
 export default Registro

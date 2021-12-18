@@ -2,6 +2,7 @@ import React from "react";
 import Tablamov from "../components/Tablamov"
 import Cancelar from "../components/Cancelar"
 import Formtrans from "../components/Formtrans"
+import TarjetaCuentasT from "../components/TarjetaCuentasT"
 
 class Dashboard extends React.Component {
 
@@ -10,6 +11,7 @@ class Dashboard extends React.Component {
             <div>
                 <Tablamov />
                 <Cancelar />
+                <TarjetaCuentasT />
                 <Formtrans />
             </div>
         )

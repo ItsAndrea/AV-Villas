@@ -1,0 +1,13 @@
+#seleccionado{
+    width: 10rem;
+    color: white;
+    background:#0050A1;
+    cursor: pointer
+}
+
+#noSeleccionado{
+    width: 10rem;
+    color: black;
+    background:gray;
+    cursor: pointer
+}
