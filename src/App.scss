@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+// @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+// @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+// @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+// @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+// @import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+$ligth : #fff;
+$gray : #c4ccde;
+$rojoAv: #e20007;
+$azulAv: #0050a1;
+
+body{
+  font-family: 'Rubik', sans-serif;
+}
+
+.navbar {
+  background-color: $ligth;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid $gray;
+
+}
+
+.flex{
+  display: flex;
+}
+
+.activeBorder{
+  background: #abacab;
+}
+
+.Sidebar{
+  width: 18rem;
+  height: calc(100vh);
+  border-right: 1px solid $gray;
+  background: #e20007;
+  ul{
+    list-style: none;
+    padding: 1rem 1rem;
+    li{
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      a{
+        text-decoration: none;
+        &.active{
+          border-left: 8px solid blue;
+          border-bottom: 1px solid blue;
+        }
+      }
+    }
+  }
+}
+
+
+.cont{
+  height: calc(100vh);
+  margin: 0;
+  .row{
+    .col{
+      margin-top: 250px;
+      font-weight: bolder;
+    }
+  }
+}
+
+

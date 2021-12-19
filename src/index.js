@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Footer from './components/Footer';
+import App from './App';
+import 'semantic-ui-css/semantic.min.css'
 
-ReactDOM.render(<Footer/>, document.getElementById('root'));
+
+ReactDOM.render(<App/>, document.getElementById('root'));
+
