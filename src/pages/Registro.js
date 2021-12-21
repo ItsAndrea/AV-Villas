@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Registro = (props) => {
     let nav = useNavigate()
     const obtenerRegis = (datos) =>{
-        fetch(`http://localhost:8000/api/crear_usuairo`, {
+        fetch(`http://localhost:8000/api/crearUsuario`, {
           method: "POST",
           body: JSON.stringify(datos),
           headers: {
