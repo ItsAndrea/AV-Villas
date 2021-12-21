@@ -16,7 +16,7 @@ const Formreg = ({registroUsuario}) => {
             ciudad:event.target.ciudadreg.value,
             password:event.target.passwordreg.value,
             confpassword:event.target.passwordregconf.value,
-            rol:"externo",
+            rol: 1,
             estado:"activo"
         };
 

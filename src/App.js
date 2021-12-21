@@ -7,9 +7,21 @@ import Dashboard from "./pages/Dashboard"
 import Login from "./pages/Login"
 import Registro from "./pages/Registro"
 
-class App extends React.Component {
+const App = () => {
+  const iniciarSesion = (datos, nav) => {
+    fetch("http://localhost:8000/api/login", {
+      method: "POST",
+      body: JSON.stringify(datos),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        window.location.href = "/dashboard"
+      });
+  }
   
-  render() {
     return (
       <BrowserRouter>
         <Routes>
@@ -21,6 +33,6 @@ class App extends React.Component {
       </BrowserRouter>
     );
   }
-}
+
 
 export default App;

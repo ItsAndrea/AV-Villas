@@ -2,18 +2,22 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Formlogin from "../components/Formlogin"
 import Footer from "../components/Footer"
+import { useNavigate } from "react-router-dom";
 
-class Login extends React.Component {
+const Login = ({obtener}) => {
 
-    render() {
+    let nav = useNavigate()
+
+    const datoslogin = (datos) =>{
+        obtener(datos, nav)
+    }
         return (
             <div>
                 <Navbar />
-                <Formlogin />
+                <Formlogin datosUser = {datoslogin}/>
                 <Footer />
             </div>
         )
     }
-}
 
 export default Login
